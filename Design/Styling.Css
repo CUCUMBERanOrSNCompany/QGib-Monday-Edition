@@ -1,0 +1,94 @@
+@font-face {
+    font-family: 'Poppins';
+    src: url('Design/Text Fonts/Poppins/Poppins-Regular.ttf') format('ttf'),
+    url('Design/Text Fonts/Poppins/Poppins-Regular.ttf') format('ttf');
+}
+
+/* Styling for <h2> titles */
+h2 {
+    font-size: 16px;
+    font-weight: normal;
+    color: #333;
+    margin-bottom: 10px;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Styling for <h3> descriptions */
+h3 {
+    font-size: 18px;
+    font-weight: normal;
+    color: #666;
+    margin-bottom: 20px;
+    font-family: 'Poppins', sans-serif;
+}
+
+#masterDropDownBtn {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    color: #333333;
+    font-size: 24px;
+}
+
+button {
+    background-color: #9cd327;
+    color: white;
+    width: 2cm;
+    height: 0.75cm;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;"
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Styling for dropdown menu */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Styling for dropdown button */
+.dropdown .dropbtn {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    background-color: #f9f9f9;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+/* Styling for dropdown content */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 120px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+/* Styling for dropdown options */
+.dropdown-content a {
+    color: #333;
+    padding: 10px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Styling for dropdown options on hover */
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+/* Show dropdown content on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.bordered-element {
+    border: 2px solid #ccc; /* Border style and color */
+    border-radius: 5px; /* Border corner radius */
+    padding: 10px; /* Optional padding for the content within the element */
+}

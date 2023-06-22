@@ -1,0 +1,2 @@
+const monday = window.mondaySdk()
+

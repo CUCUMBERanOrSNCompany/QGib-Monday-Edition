@@ -1,0 +1,72 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>QGib</title>
+
+    <link rel="stylesheet" href="Design/Styling.Css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/monday-sdk-js/dist/main.js"></script>
+    <script src='Scripts/MondaySDKImporter.js'></script>
+    <script src='OpenAIDetails.js'></script>
+
+    <script  src='Scripts/UI/DropDownMenuActivator.js'></script>
+
+    <script src='Scripts/Customer Preferences/LoaderFromLocalStorage.js'></script>
+    <script src='Scripts/Dictionaries/HebrewDictionaries.js'></script>
+    <script src='Scripts/Dictionaries/ArabicDictionaries.js'></script>
+    <script src='Scripts/Language Rules/English/EnglishAbbreviations.js'></script>
+    <script src='Scripts/Language Rules/English/EnglishRulesPerWord.js'></script>
+    <script src='Scripts/Language Rules/General/BasicTextCheckers.js'></script>
+    <script src='Scripts/Converters/ToHebrewConverter.js'></script>
+    <script src='Scripts/Converters/ToArabicConverter.js'></script>
+    <script src='Scripts/Converters/ToEnglishConverter.js'></script>
+    <script src='Scripts/Converters/Converter.js'></script>
+    <script src='Scripts/QGib Logic/Classifier.js'></script>
+    <script src='Scripts/Language Models/OpenAIGrammarModel.js'></script>
+    <script src='Scripts/QGib Logic/QGibLogic.js'></script>
+
+</head>
+<body onload="Main()">
+
+<div>
+    <button id="masterDropDownBtn" onclick="DropDownFlipper()"><i class="fas fa-bars"></i></button>
+    <br>
+    <ul id="masterDropDownMenu" style="display: none;">
+        <li>Change your foreign language...
+            <ul class="sub-dropdown hidden">
+                <li><a href="#">English/English</a></li>
+                <li><a href="#">Arabic/اَلْعَرَبِيَّةُ,</a></li>
+                <li><a href="#">Hebrew/עברית,</a></li>
+            </ul>
+        </li>
+<!--        How can I open a link in a new tab?-->
+        <li><a href="https://www.paypal.com/paypalme/CucumberByOrSN">Donate to QGib</a></li>
+    </ul>
+</div>
+<br>
+<div class="bordered-element">
+    <h2>Here is the fixed text brought to you by QGib:</h2>
+    <h3 id="QGibPreviewBox" class="bordered-element"></h3>
+
+    <button id="QGibConfirmBtn" onclick="ReplaceText()">Apply Fix</button>
+</div>
+<br>
+<div class="bordered-element">
+    <h2>Here is a proposed rephrase of your text by QAI Al-Safa:</h2>
+    <h3 id="alSafaPreviewBox" class="bordered-element"></h3>
+
+    <button id="alSafaConfirmBtn" onclick="ReplaceTextWithAlSafa()">Apply Change</button>
+</div>
+
+<!--<TEXTAREA id="text">Highlight this text or parts of it and click the button below!</TEXTAREA><BR>-->
+<!--<INPUT type="button" onclick="LoadForeignLanguagePreference()" value="Select text and click here" />-->
+<!--<INPUT type="button" onclick="Main()" value="Select text and click here" />-->
+</body>
+
+</html>
